@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="book">
+            <h2><span jhiTranslate="jhpdemoappApp.book.detail.title">Book</span> {{book.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhpdemoappApp.book.book_name">Book Name</span></dt>
+                <dd>
+                    <span>{{book.book_name}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhpdemoappApp.book.book_isbn_no">Book Isbn No</span></dt>
+                <dd>
+                    <span>{{book.book_isbn_no}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/book', book.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

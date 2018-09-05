@@ -1,0 +1,11 @@
+package com.thrymr.repository;
+
+import com.thrymr.domain.Authority;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+/**
+ * Spring Data JPA repository for the Authority entity.
+ */
+public interface AuthorityRepository extends JpaRepository<Authority, String> {
+}
